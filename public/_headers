@@ -1,32 +1,12 @@
-# _headers file
-# These HTTP headers are sent by the server with EVERY response.
-# Server-level headers are stronger than meta tags — they can't be stripped by the browser.
-
 /*
-  # HTTPS only — redirects any HTTP request to HTTPS
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-
-  # Clickjacking — refuse to be embedded in any iframe
   X-Frame-Options: DENY
-
-  # MIME sniffing — don't guess file types
   X-Content-Type-Options: nosniff
-
-  # Referrer — only send your domain name on cross-origin requests, not full URL
   Referrer-Policy: strict-origin-when-cross-origin
-
-  # Permissions — disable all hardware APIs
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
-
-  # XSS Protection (legacy browsers)
   X-XSS-Protection: 1; mode=block
-
-  # Content Security Policy (main XSS defence)
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formspree.io;
-
-  # Cache control for HTML — always revalidate so users get latest version
   Cache-Control: no-cache
 
 /assets/*
-  # Assets (JS/CSS) have hashed filenames so they can be cached for a year safely
   Cache-Control: public, max-age=31536000, immutable
