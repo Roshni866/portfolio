@@ -1,0 +1,5 @@
+# Force HTTPS — redirect any HTTP request to HTTPS
+http://roshnibagga.netlify.app/* https://roshnibagga.netlify.app/:splat 301!
+
+# SPA fallback — React handles its own routing, so send all paths to index.html
+/*    /index.html   200
