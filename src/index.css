@@ -29,6 +29,33 @@
   --page-glow-3: rgba(99,155,230,0.12);
 }
 
+:root.dark {
+  --bg-primary: #0d1117;
+  --bg-surface: #161b22;
+  --bg-card: #1c2128;
+  --bg-dark: #010409;
+  --text-primary: #e6edf3;
+  --text-muted: #8b949e;
+  --border-color: #30363d;
+  --blue: #2563eb;
+  --blue-bright: #3b82f6;
+  --blue-dim: #1e40af;
+  --green: #3fb950;
+  --bg-page: #08080f;
+  --card-bg: rgba(15,15,26,0.8);
+  --card-border: #1e1e35;
+  --card-hover-border: rgba(37,99,235,0.45);
+  --card-hover-shadow: rgba(37,99,235,0.1);
+  --skill-bg: rgba(15,15,26,0.9);
+  --skill-gradient: rgba(59,130,246,0.05);
+  --scrollbar-track: #08080f;
+  --dot-color: rgba(59,130,246,0.2);
+  --divider-color: rgba(59,130,246,0.3);
+  --page-glow-1: rgba(59,130,246,0.07);
+  --page-glow-2: rgba(29,78,216,0.06);
+  --page-glow-3: rgba(59,130,246,0.05);
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
@@ -68,20 +95,13 @@ body {
   }
 
   .page-gradient {
-  background:
-    radial-gradient(ellipse 70% 50% at 15% 0%, rgba(99,155,230,0.18) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 45% at 85% 15%, rgba(147,197,253,0.15) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 40% at 50% 85%, rgba(99,155,230,0.12) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 30% at 20% 60%, rgba(191,219,254,0.2) 0%, transparent 50%),
-    var(--bg-page);
-}
-:root.dark .page-gradient {
-  background:
-    radial-gradient(ellipse 80% 50% at 20% 10%, rgba(59,130,246,0.07) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(29,78,216,0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 40% at 50% 90%, rgba(59,130,246,0.05) 0%, transparent 60%),
-    #08080f;
-}
+    background:
+      radial-gradient(ellipse 70% 50% at 15% 0%, var(--page-glow-1) 0%, transparent 55%),
+      radial-gradient(ellipse 60% 45% at 85% 15%, var(--page-glow-2) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 40% at 50% 85%, var(--page-glow-3) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 30% at 20% 60%, rgba(191,219,254,0.2) 0%, transparent 50%),
+      var(--bg-page);
+  }
 
   .cursor-blink { animation: blink 1s step-end infinite; }
   @keyframes blink {
