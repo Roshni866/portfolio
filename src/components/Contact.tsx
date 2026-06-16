@@ -12,12 +12,19 @@ export default function Contact() {
     return () => obs.disconnect()
   }, [])
 
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setSent(true)
-    setTimeout(() => setSent(false), 3000)
-    setForm({ name: '', email: '', message: '' })
-  }
+const submit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  
+  await fetch('https://formspree.io/f/mvznyvgv', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(form),
+  })
+
+  setSent(true)
+  setTimeout(() => setSent(false), 3000)
+  setForm({ name: '', email: '', message: '' })
+}
 
   const inputCls = `w-full bg-dark border border-border rounded-xl px-4 py-3 text-white font-mono text-sm
     focus:outline-none focus:border-blue-DEFAULT transition-colors placeholder:text-muted/50`
@@ -104,10 +111,10 @@ export default function Contact() {
 
               {/* Last updated note */}
               <p className="text-muted/50 text-xs font-mono mt-3 text-center">
-                last updated · June 2025
+                last updated · June 2026
               </p>
             </div>
-
+~
             {/* Quick Info */}
             <div className="bg-surface/70 border border-border rounded-2xl p-6 backdrop-blur-md">
               <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
