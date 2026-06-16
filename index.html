@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roshni Bagga — AI/ML Engineer & Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Roshni Bagga — CS undergrad at TIET building AI products, data pipelines, and full-stack applications." />
+
+    <!-- 1. CONTENT SECURITY POLICY (most important)
+         Tells browsers what sources are allowed to load scripts, styles, fonts.
+         Blocks XSS attacks — if someone injects a <script>, CSP blocks it from running. -->
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline';
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src 'self' https://fonts.gstatic.com;
+      img-src 'self' data: https:;
+      connect-src 'self';
+      frame-ancestors 'none';
+      base-uri 'self';
+      form-action 'self';
+    " />
+
+    <!-- 2. CLICKJACKING PROTECTION
+         Prevents your site from being embedded in an iframe on another site.
+         Attackers use iframes to trick users into clicking things (clickjacking). -->
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+
+    <!-- 3. MIME SNIFFING PROTECTION
+         Stops browsers from guessing file types.
+         Without this, a renamed .jpg that's actually a .js can execute as JavaScript. -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+    <!-- 4. REFERRER POLICY
+         Controls how much URL info is sent when someone clicks a link on your site.
+         'strict-origin-when-cross-origin' = only sends your domain name, not the full path. -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- 5. PERMISSIONS POLICY
+         Disables browser features you don't need — camera, microphone, location etc.
+         Prevents malicious third-party scripts from accessing these even if injected. -->
+    <meta http-equiv="Permissions-Policy" content="
+      camera=(),
+      microphone=(),
+      geolocation=(),
+      payment=(),
+      usb=(),
+      magnetometer=(),
+      accelerometer=(),
+      gyroscope=()
+    " />
+
+    <!-- 6. SEO + OPEN GRAPH (also good practice) -->
+    <meta property="og:title" content="Roshni Bagga — AI/ML & Full Stack Developer" />
+    <meta property="og:description" content="CS undergrad at TIET building AI products, data pipelines, and full-stack applications. GPA 9.43." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
