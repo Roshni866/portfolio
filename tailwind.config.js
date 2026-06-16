@@ -1,18 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        dark:    '#08080f',
-        surface: '#0f0f1a',
-        card:    '#141424',
-        border:  '#1e1e35',
-        muted:   '#64748b',
+        dark:    'var(--bg-dark)',
+        surface: 'var(--bg-surface)',
+        card:    'var(--bg-card)',
+        border:  'var(--border-color)',
+        muted:   'var(--text-muted)',
         blue: {
-          DEFAULT: '#3b82f6',
-          bright:  '#60a5fa',
+          DEFAULT: 'var(--blue)',
+          bright:  'var(--blue-bright)',
           dim:     '#1d4ed8',
+        },
+        green: {
+          400: 'var(--green)',
         },
       },
       fontFamily: {

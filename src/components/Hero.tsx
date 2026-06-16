@@ -53,29 +53,30 @@ export default function Hero() {
           </div>
           <div className="font-mono text-sm space-y-3">
             <p className="text-muted"><span className="text-blue-DEFAULT">$</span> whoami</p>
-            <p className="text-white text-xl sm:text-2xl font-bold">
+            <p className="text-[var(--text-primary)] text-xl sm:text-2xl font-bold">
               Hi, I'm <span className="text-blue-DEFAULT">Roshni Bagga</span> 👋
             </p>
             <p className="text-muted mt-1"><span className="text-blue-DEFAULT">$</span> cat role.txt</p>
-            <div className="text-white text-base sm:text-lg min-h-[28px] flex items-center gap-1">
+            <div className="text-[var(--text-primary)] text-base sm:text-lg min-h-[28px] flex items-center gap-1">
               {text}
               <span className="inline-block w-0.5 h-5 bg-blue-DEFAULT align-middle cursor-blink" />
             </div>
           </div>
         </div>
-{/* 
-        <p className="text-muted text-sm font-mono mb-8">
-          {'>'} B.Tech Computer Engineering @ Thapar Institute · GPA 9.43
-        </p> */}
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <button onClick={() => go('projects')}
-            className="px-8 py-3 bg-blue-DEFAULT text-white font-mono rounded-xl hover:bg-blue-bright transition-all duration-200 font-semibold"
-            style={{ boxShadow: '0 0 25px rgba(59,130,246,0.35)' }}>
+            className="px-8 py-3 font-mono rounded-xl font-semibold text-white transition-all duration-200"
+            style={{ background: '#2563eb', boxShadow: '0 0 25px rgba(37,99,235,0.35)' }}
+            onMouseEnter={e => (e.currentTarget.style.background = '#1d4ed8')}
+            onMouseLeave={e => (e.currentTarget.style.background = '#2563eb')}>
             view projects →
           </button>
           <button onClick={() => go('contact')}
-            className="px-8 py-3 border border-border text-white font-mono rounded-xl hover:border-blue-DEFAULT/60 hover:bg-blue-DEFAULT/10 transition-all duration-200">
+            className="px-8 py-3 font-mono rounded-xl transition-all duration-200 text-[var(--text-primary)]"
+            style={{ border: '2px solid #2563eb' }}
+            onMouseEnter={e => { e.currentTarget.style.background = '#2563eb'; e.currentTarget.style.color = '#fff' }}
+            onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '' }}>
             get in touch
           </button>
         </div>

@@ -35,7 +35,7 @@ export default function Certificates() {
       <div className={`max-w-6xl mx-auto transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         <div className="mb-14">
           <p className="font-mono text-xs text-blue-DEFAULT tracking-widest uppercase mb-3">// 05</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 tracking-tight">Certifications</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--text-primary)] mb-3 tracking-tight">Certifications</h2>
           <p className="font-mono text-sm text-muted">Industry simulations and achievements</p>
         </div>
 
@@ -50,7 +50,7 @@ export default function Certificates() {
                   <div className="w-11 h-11 rounded-xl bg-blue-DEFAULT/10 border border-blue-DEFAULT/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <BadgeIcon />
                   </div>
-                  <h3 className="text-white font-bold text-base mb-2 group-hover:text-blue-bright transition-colors">{cert.title}</h3>
+                  <h3 className="text-[var(--text-primary)] font-bold text-base mb-2 group-hover:text-blue-bright transition-colors">{cert.title}</h3>
                   <div className="flex items-center gap-2 text-sm text-muted mb-4">
                     <span>{cert.issuer}</span>
                     <span className="text-border">•</span>

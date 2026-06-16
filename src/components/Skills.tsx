@@ -7,11 +7,11 @@ const CATEGORIES = [
   },
   {
     label: 'Frameworks & Technologies',
-    skills: ['React', 'Node.js',  'FastAPI', 'Streamlit', 'REST APIs', 'Pandas', 'NumPy', 'Scikit-learn', 'PyTorch', 'TensorFlow', 'XGBoost', 'BERT', 'Hugging Face'],
+    skills: ['React', 'Node.js', 'FastAPI', 'Streamlit', 'REST APIs', 'Pandas', 'NumPy', 'Scikit-learn', 'PyTorch', 'TensorFlow', 'XGBoost', 'BERT', 'Hugging Face'],
   },
   {
     label: 'Developer Tools',
-    skills: ['Git / GitHub', 'VS Code', 'Jupyter', 'Vercel', 'MySQL', 'MongoDB', 'OpenCV', ' Claude API'],
+    skills: ['Git / GitHub', 'VS Code', 'Jupyter', 'Vercel', 'MySQL', 'MongoDB', 'OpenCV', 'Claude API'],
   },
 ]
 
@@ -33,7 +33,7 @@ export default function Skills() {
         <div className="flex items-center gap-5 mb-14">
           <div>
             <p className="font-mono text-xs text-blue-DEFAULT tracking-widest uppercase mb-1">// 02</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Technical Skills</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[var(--text-primary)] tracking-tight">Technical Skills</h2>
           </div>
           <div className="flex-1 h-px bg-gradient-to-r from-blue-DEFAULT/40 to-transparent mt-6" />
         </div>
@@ -49,8 +49,8 @@ export default function Skills() {
               <div className="flex flex-wrap gap-2.5">
                 {cat.skills.map((skill, si) => (
                   <span key={skill}
-                    className={`px-3 py-1.5 text-sm text-white/80 font-mono rounded-lg border border-border/80 bg-dark/60
-                      hover:border-blue-DEFAULT/50 hover:text-white hover:bg-blue-DEFAULT/8 transition-all duration-200 cursor-default
+                    className={`px-3 py-1.5 text-sm text-[var(--text-primary)] font-mono rounded-lg border border-border/80 bg-dark/60
+                      hover:border-blue-DEFAULT/50 hover:bg-blue-DEFAULT/8 transition-all duration-200 cursor-default
                       ${visible ? 'opacity-100' : 'opacity-0'}`}
                     style={{ transitionDelay: `${ci * 100 + si * 35 + 250}ms`, transition: 'opacity 0.5s, border-color 0.2s, color 0.2s, background 0.2s' }}>
                     {skill}

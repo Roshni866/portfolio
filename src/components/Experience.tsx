@@ -29,7 +29,7 @@ export default function Experience() {
       <div className={`max-w-4xl mx-auto transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         <div className="mb-14">
           <p className="font-mono text-xs text-blue-DEFAULT tracking-widest uppercase mb-3">// 03</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 tracking-tight">Experience</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--text-primary)] mb-3 tracking-tight">Experience</h2>
           <p className="font-mono text-sm text-muted">Where I've contributed and what I've built</p>
         </div>
 
@@ -46,7 +46,7 @@ export default function Experience() {
                 <div className="card p-6 group">
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-4 gap-2">
                     <div>
-                      <h3 className="text-white font-bold text-lg group-hover:text-blue-bright transition-colors">{exp.role}</h3>
+                      <h3 className="text-[var(--text-primary)] font-bold text-lg group-hover:text-blue-bright transition-colors">{exp.role}</h3>
                       <p className="text-blue-DEFAULT text-sm font-mono">{exp.company}</p>
                     </div>
                     <span className="text-muted text-xs font-mono whitespace-nowrap bg-dark px-3 py-1 rounded-full border border-border">{exp.period}</span>

@@ -15,7 +15,7 @@ export default function About() {
 
         <div className="mb-14">
           <p className="font-mono text-xs text-blue-DEFAULT tracking-widest uppercase mb-3">// 01</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 tracking-tight">About Me</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--text-primary)] mb-3 tracking-tight">About Me</h2>
           <p className="font-mono text-sm text-muted">Engineer · Builder · Data Enthusiast</p>
         </div>
 
@@ -29,35 +29,33 @@ export default function About() {
           <div className="p-8 font-mono text-sm leading-relaxed space-y-5">
             <p className="text-blue-DEFAULT">#!/bin/bash</p>
 
-            <p className="text-white/85 text-base leading-7">
+            <p className="text-[var(--text-primary)]/85 text-base leading-7">
               I'm <span className="text-blue-DEFAULT font-semibold">Roshni Bagga</span> — a Computer Engineering student
-              at <span className="text-white font-semibold">Thapar Institute of Engineering & Technology</span> (GPA: 9.43),
-              obsessed with turning raw data into products that actually matter.
+              at <span className="text-[var(--text-primary)] font-semibold">Thapar Institute of Engineering & Technology</span> (GPA: 9.43),
+              and I build things that actually ship.
             </p>
 
-            <p className="text-white/85 text-base leading-7">
-              I don't just write code — I build <span className="text-blue-bright">end-to-end data products</span>: from
-              designing scalable REST API backends and ML pipelines to shipping AI-powered tools used by real users.
-              Whether it's detecting credit card fraud across 284K transactions or semantically matching resumes to job
-              descriptions using BERT, I obsess over <span className="text-blue-bright">data quality, reproducibility,
-              and product impact</span>.
+            <p className="text-[var(--text-primary)]/85 text-base leading-7">
+              Most of my projects start with a real problem — fraud hiding in <span className="text-blue-bright">284K transactions</span>,
+              resumes that never make it past an ATS, codebases nobody can quickly understand. I write the ML pipeline,
+              build the <span className="text-blue-bright">API around it, deploy it, and keep it running</span>.{' '}
+              <span className="text-[var(--text-primary)] font-semibold">RepoLens</span>, my current project, is a live AI tool that
+              analyzes any GitHub repository and is used by real people right now.
             </p>
 
-            <p className="text-white/85 text-base leading-7">
-              My edge is the intersection of <span className="text-blue-bright">AI/ML engineering and full-stack development</span> —
-              I can take a model from experimentation to a live, deployed product. I've shipped contributions to
-              open-source ML repositories, debugged PyTorch pipelines under real production constraints, and mentored
-              contributors across distributed teams.
+            <p className="text-[var(--text-primary)]/85 text-base leading-7">
+              I've contributed to <span className="text-blue-bright">open-source ML repositories</span> through GSSoC,
+              reviewed code with contributors across time zones, and written documentation that became the standard
+              for two projects. I work well in distributed teams and I don't need hand-holding to ship.
             </p>
 
-            <p className="text-white/85 text-base leading-7">
-              I'm actively seeking <span className="text-green-400">internship and full-time opportunities</span> in
-              data engineering, AI/ML, or product development where I can build things that scale.
+            <p className="text-[var(--text-primary)]/85 text-base leading-7">
+              I'm looking for <span className="text-green-400">internships or roles in AI/ML or full-stack engineering</span>{' '}
+              where I can build impactful products and grow as an engineer.
             </p>
 
             <div className="pt-5 border-t border-border grid sm:grid-cols-3 gap-4">
-              {/* <p className="text-muted"><span className="text-blue-DEFAULT">location</span> › <span className="text-white">📍 Patiala, India</span></p> */}
-              <p className="text-muted"><span className="text-blue-DEFAULT">education</span> › <span className="text-white">B.Tech CE, TIET</span></p>
+              <p className="text-muted"><span className="text-blue-DEFAULT">education</span> › <span className="text-[var(--text-primary)]">B.Tech CE, TIET</span></p>
               <p className="text-muted"><span className="text-blue-DEFAULT">status</span> › <span className="text-green-400">Open to opportunities</span></p>
             </div>
           </div>

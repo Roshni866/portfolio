@@ -2,37 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg-primary: #ffffff;
+  --bg-surface: #f1f5f9;
+  --bg-card: #e8edf5;
+  --bg-dark: #f1f5f9;
+  --text-primary: #0d1117;
+  --text-muted: #57606a;
+  --border-color: #cbd5e1;
+  --blue: #2563eb;
+  --blue-bright: #1d4ed8;
+  --blue-dim: #1e40af;
+  --green: #15803d;
+  --bg-page: #f8faff;
+  --card-bg: rgba(226,232,240,0.8);
+  --card-border: #cbd5e1;
+  --card-hover-border: rgba(37,99,235,0.45);
+  --card-hover-shadow: rgba(37,99,235,0.1);
+  --skill-bg: rgba(226,232,240,0.9);
+  --skill-gradient: rgba(37,99,235,0.05);
+  --scrollbar-track: #f1f5f9;
+  --dot-color: rgba(37,99,235,0.15);
+  --divider-color: rgba(37,99,235,0.2);
+  --page-glow-1: rgba(99,155,230,0.18);
+  --page-glow-2: rgba(147,197,253,0.15);
+  --page-glow-3: rgba(99,155,230,0.12);
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+
 body {
-  background: #08080f;
-  color: #f0f4ff;
+  background: var(--bg-page);
+  color: var(--text-primary);
   font-family: 'Inter', system-ui, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #08080f; }
-::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 4px; }
-::selection { background: #3b82f6; color: #fff; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 4px; }
+::selection { background: var(--blue); color: #fff; }
 
 @layer utilities {
-  /* Dot grid texture */
   .dot-grid {
-    background-image: radial-gradient(circle, rgba(59,130,246,0.2) 1px, transparent 1px);
+    background-image: radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
     background-size: 28px 28px;
   }
 
-  /* Section divider */
   .divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(59,130,246,0.3), transparent);
+    background: linear-gradient(90deg, transparent, var(--divider-color), transparent);
     margin: 0 auto;
     max-width: 900px;
   }
 
-  /* Ambient glow blob */
   .glow-blob {
     position: absolute;
     border-radius: 50%;
@@ -41,14 +67,21 @@ body {
     z-index: 0;
   }
 
-  /* Global page gradient — sits behind everything */
   .page-gradient {
-    background:
-      radial-gradient(ellipse 80% 50% at 20% 10%, rgba(59,130,246,0.07) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 40% at 80% 60%, rgba(29,78,216,0.06) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 40% at 50% 90%, rgba(59,130,246,0.05) 0%, transparent 60%),
-      #08080f;
-  }
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 0%, rgba(99,155,230,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 45% at 85% 15%, rgba(147,197,253,0.15) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 50% 85%, rgba(99,155,230,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 20% 60%, rgba(191,219,254,0.2) 0%, transparent 50%),
+    var(--bg-page);
+}
+:root.dark .page-gradient {
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 10%, rgba(59,130,246,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(29,78,216,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 50% 90%, rgba(59,130,246,0.05) 0%, transparent 60%),
+    #08080f;
+}
 
   .cursor-blink { animation: blink 1s step-end infinite; }
   @keyframes blink {
@@ -56,24 +89,22 @@ body {
     51%,100%{ opacity: 0; }
   }
 
-  /* Cards */
   .card {
-    background: rgba(15,15,26,0.8);
-    border: 1px solid #1e1e35;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
     border-radius: 16px;
     transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
     backdrop-filter: blur(8px);
   }
   .card:hover {
-    border-color: rgba(59,130,246,0.45);
-    box-shadow: 0 0 30px rgba(59,130,246,0.1);
+    border-color: var(--card-hover-border);
+    box-shadow: 0 0 30px var(--card-hover-shadow);
     transform: translateY(-2px);
   }
 
-  /* Skill cards — richer style */
   .skill-card {
-    background: rgba(15,15,26,0.9);
-    border: 1px solid #1e1e35;
+    background: var(--skill-bg);
+    border: 1px solid var(--card-border);
     border-radius: 14px;
     transition: all 0.25s ease;
     backdrop-filter: blur(8px);
@@ -84,14 +115,14 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(59,130,246,0.05) 0%, transparent 60%);
+    background: linear-gradient(135deg, var(--skill-gradient) 0%, transparent 60%);
     opacity: 0;
     transition: opacity 0.25s;
   }
   .skill-card:hover::before { opacity: 1; }
   .skill-card:hover {
-    border-color: rgba(59,130,246,0.5);
-    box-shadow: 0 0 24px rgba(59,130,246,0.12), inset 0 1px 0 rgba(59,130,246,0.1);
+    border-color: var(--card-hover-border);
+    box-shadow: 0 0 24px var(--card-hover-shadow), inset 0 1px 0 var(--skill-gradient);
     transform: translateY(-3px);
   }
 }

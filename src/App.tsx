@@ -1,3 +1,5 @@
+
+
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -10,7 +12,7 @@ import Footer from './components/Footer'
 
 export default function App() {
   return (
-    <div className="min-h-screen page-gradient text-white">
+    <div className="min-h-screen page-gradient text-[var(--text-primary)]">
       <Navbar />
       <main>
         <Hero />
