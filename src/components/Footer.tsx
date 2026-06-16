@@ -20,7 +20,7 @@ export default function Footer() {
               <span className="text-blue-DEFAULT">&lt;</span>Roshni<span className="text-blue-DEFAULT">/&gt;</span>
             </p>
             <p className="text-muted text-sm leading-relaxed">
-              CS undergrad at TIET building AI products, data pipelines, and full-stack applications. GPA 9.43. Open to opportunities.
+              CS undergrad at TIET building AI products, data pipelines, and full-stack applications.Open to opportunities.
             </p>
           </div>
 
@@ -29,10 +29,10 @@ export default function Footer() {
               <span className="text-blue-DEFAULT font-mono text-sm">{'>'}</span> Quick Info
             </p>
             <div className="space-y-2 font-mono text-sm">
-              <p className="text-muted"><span className="text-blue-DEFAULT">location</span> › <span className="text-white">📍 Patiala, India</span></p>
+              <p className="text-muted"><span className="text-blue-DEFAULT">location</span> › <span className="text-white"> Patiala, India</span></p>
               <p className="text-muted"><span className="text-blue-DEFAULT">college</span> › <span className="text-white">TIET, 2024–2028</span></p>
-              <p className="text-muted"><span className="text-blue-DEFAULT">status</span> › <span className="text-green-400">● Open to opportunities</span></p>
-              <p className="text-muted"><span className="text-blue-DEFAULT">email</span> › <a href="mailto:roshnibagga866@gmail.com" className="text-blue-DEFAULT hover:underline">roshnibagga866@gmail.com</a></p>
+              <p className="text-muted"><span className="text-blue-DEFAULT">status</span> › <span className="text-green-400"> Open to opportunities</span></p>
+              <p className="text-muted"><span className="text-blue-DEFAULT">email</span> › <a href="mailto:roshnibagga866@gmail.com" className="text-blue-DEFAULT hover:underline">roshnibagga8606@gmail.com</a></p>
             </div>
           </div>
 
